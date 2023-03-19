@@ -1,0 +1,17 @@
+name: fractalnow-api
+version: 0.1.0
+
+authors:
+  - Dzmitry <dmitry.litmanovich@pm.me>
+
+targets:
+  fractalnow-api:
+    main: src/fractalnow-api.cr
+
+crystal: 1.7.3
+
+dependencies:
+  kemal:
+    github: kemalcr/kemal
+
+license: MIT

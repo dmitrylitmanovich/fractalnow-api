@@ -14,11 +14,11 @@ WORKDIR /app
 RUN shards install
 
 # Build our app
-RUN crystal build src/fractalnow-api.cr
+RUN crystal build --release src/fractalnow-api.cr
 
 # Run the tests
 RUN crystal spec
 
 EXPOSE 3000
 
-CMD ./app
+CMD ./fractalnow-api

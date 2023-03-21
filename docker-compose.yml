@@ -1,0 +1,18 @@
+services:
+  web:
+    build: .
+    command: bash -c "bundle exec puma"
+    stdin_open: true
+    tty: true
+    volumes:
+      - .:/usr/src/app
+      - bundle:/usr/local/bundle
+    ports:
+      - "9292:9292"
+    env_file:
+      - .env
+    environment:
+      - HISTFILE=/usr/src/app/log/.bash_history 
+
+volumes:
+  bundle:
